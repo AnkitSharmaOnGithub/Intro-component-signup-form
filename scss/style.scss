@@ -1,0 +1,93 @@
+@import "variables";
+@import "mixins";
+
+@include google-fonts('Poppins');
+
+* {
+  @include reset-styles();
+}
+
+body{
+    @include defaults();
+    background-image: url('/images/bg-intro-desktop.png');
+    background-color: $primary-red;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    min-height: 100vh;
+}
+
+.container__intro,.container__form{
+    flex: 1;
+}
+
+.container__intro{
+    color:#fff;
+}
+
+.container__intro h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.container__intro p{
+    line-height: 1.5;
+}
+
+.badge{
+    padding: 1rem;
+    text-align: center;
+    @include rounded(10px);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tryfree{
+    background-color: $accent;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.tryfree>span{
+    font-weight: 200;
+}
+
+.form{
+    background-color: #fff;
+    padding: 2.5rem;
+    @include rounded(5px);
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    @include rounded(5px);
+    border: 1px solid $grayish-blue;
+    margin-bottom: 2rem;
+    outline: none;
+
+    &:focus,&:active{
+        border : 1px solid $dark-blue;
+    }
+}
+
+.claim{
+    background-color: $primary-green;
+    border: 1px solid hsl(154, 59%, 45%);
+    color : #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem;
+    width: 100%;
+    @include rounded(5px);
+    box-shadow: 0 2px hsl(154, 59%, 45%);
+    cursor: pointer;
+}
