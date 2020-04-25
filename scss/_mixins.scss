@@ -22,3 +22,15 @@
 @mixin rounded($radius) {
   border-radius: $radius;
 }
+
+@mixin small-screen() {
+  @media only screen and (max-width : $small-width){
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media only screen and (max-width : $large-width){
+    @content;
+  }
+}
