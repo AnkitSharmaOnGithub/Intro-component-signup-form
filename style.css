@@ -72,6 +72,8 @@ input {
   border: 1px solid #b9b6d3;
   margin-bottom: 2rem;
   outline: none;
+  font-weight: 600;
+  font-family: "Poppins";
 }
 input:focus, input:active {
   border: 1px solid #3e3c49;
@@ -80,6 +82,7 @@ input:focus, input:active {
 .claim {
   background-color: #38cc8c;
   border: 1px solid #2fb67c;
+  margin-bottom: 1rem;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -89,6 +92,16 @@ input:focus, input:active {
   border-radius: 5px;
   box-shadow: 0 2px #2fb67c;
   cursor: pointer;
+}
+
+.terms {
+  font-size: 0.7rem;
+  color: #b9b6d3;
+  text-align: center;
+}
+.terms span {
+  color: #ff7a7a;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
