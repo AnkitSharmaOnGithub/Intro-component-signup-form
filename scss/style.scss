@@ -107,6 +107,10 @@ input{
 }
 
 @include small-screen(){
+    body{
+        background-image: url('/images/bg-intro-mobile.png');
+    }
+
     .container{
         flex-direction: column;
         padding: 2rem;
@@ -121,5 +125,5 @@ input{
         font-size: 1.5rem;
     }
     
-    
+
 }
