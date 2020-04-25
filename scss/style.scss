@@ -105,3 +105,23 @@ input{
         font-weight: 700;
     }
 }
+
+@include small-screen(){
+    .container{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .container__intro{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .container__intro h1{
+        font-size: 1.5rem;
+    }
+    
+    .badge{
+        margin-bottom: 2rem;
+    }
+}
