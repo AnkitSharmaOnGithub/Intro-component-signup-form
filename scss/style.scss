@@ -64,6 +64,42 @@ body{
     @include rounded(5px);
 }
 
+.form-control{
+    position: relative;
+
+    img{
+        display: none;
+        position: absolute;
+        top : 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    .message{
+        font-size: .8rem;
+        position: absolute;
+        bottom: -1.5rem;
+        right: 10px;
+    }
+}
+
+.form-control.error{
+        color: $primary-red;
+
+    input{
+        border-color: $primary-red;
+        color: $primary-red;
+
+        &::placeholder{
+            color: $primary-red;
+        }
+    }
+
+    img{
+        display: block;
+    }
+}
+
 input{
     display: block;
     width: 100%;
@@ -91,8 +127,16 @@ input{
     padding: 1rem;
     width: 100%;
     @include rounded(5px);
-    box-shadow: 0 2px hsl(154, 59%, 45%);
+    box-shadow: 0 4px hsl(154, 59%, 45%);
+    border : none;
     cursor: pointer;
+    outline: none;
+}
+
+button.claim:active{
+    transform: translateY(2px);
+    border-color: $primary-green;
+    box-shadow: 0 2px $primary-green;
 }
 
 .terms{
