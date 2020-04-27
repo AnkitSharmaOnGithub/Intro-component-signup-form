@@ -64,6 +64,37 @@ body {
   border-radius: 5px;
 }
 
+.form-control {
+  position: relative;
+}
+.form-control img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.form-control .message {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: -1.5rem;
+  right: 10px;
+}
+
+.form-control.error {
+  color: #ff7a7a;
+}
+.form-control.error input {
+  border-color: #ff7a7a;
+  color: #ff7a7a;
+}
+.form-control.error input::placeholder {
+  color: #ff7a7a;
+}
+.form-control.error img {
+  display: block;
+}
+
 input {
   display: block;
   width: 100%;
@@ -90,8 +121,16 @@ input:focus, input:active {
   padding: 1rem;
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 2px #2fb67c;
+  box-shadow: 0 4px #2fb67c;
+  border: none;
   cursor: pointer;
+  outline: none;
+}
+
+button.claim:active {
+  transform: translateY(2px);
+  border-color: #38cc8c;
+  box-shadow: 0 2px #38cc8c;
 }
 
 .terms {
